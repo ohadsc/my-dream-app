@@ -54,7 +54,7 @@ pipeline {
         sh 'cd dist'
         withAWS(region:'us-east-2',credentials:'planny-aws-creds') {
                       s3Delete(bucket: 'planny-dev', path:'**/*')
-                      s3Upload(bucket: 'planny-dev', workingDir:'dist', includePathPattern:'**/*');
+                      s3Upload(bucket: 'planny-dev', workingDir:'dist/my-dream-app', includePathPattern:'**/*');
                     }
       }
     }
