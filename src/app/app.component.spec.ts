@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'my-dream-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('my-dream-app');
+    expect(app.title).toEqual('Planny');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to my-dream-app!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Planny!');
   });
 });
