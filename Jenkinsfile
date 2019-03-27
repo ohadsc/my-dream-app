@@ -48,6 +48,9 @@ pipeline {
       }
     }
     stage('Upload to S3 Folder') {
+      when {
+        branch 'master'
+      }
       agent any
       steps {
         unstash 'dist'
